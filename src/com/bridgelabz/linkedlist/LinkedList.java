@@ -42,4 +42,9 @@ public class LinkedList <T>{
         newNode.next=tail;
 
     }
+
+    public void pop() {
+        T deleteElement= head.data;
+        head=head.next;
+    }
 }
