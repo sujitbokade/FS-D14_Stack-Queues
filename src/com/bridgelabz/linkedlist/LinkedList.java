@@ -36,4 +36,10 @@ public class LinkedList <T>{
         System.out.println("Null");
     }
 
+    public void insert(T data) {
+        Node<T> newNode=new Node<>(data);
+        head.next=newNode;
+        newNode.next=tail;
+
+    }
 }
