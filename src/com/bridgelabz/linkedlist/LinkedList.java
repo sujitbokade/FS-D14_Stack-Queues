@@ -47,4 +47,13 @@ public class LinkedList <T>{
         T deleteElement= head.data;
         head=head.next;
     }
+
+    public void popLast() {
+        Node<T>temp=head;
+        while(temp.next!=tail){
+            temp=temp.next;
+        }
+        temp.next=null;
+        temp=tail;
+    }
 }
