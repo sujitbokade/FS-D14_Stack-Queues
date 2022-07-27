@@ -56,4 +56,13 @@ public class LinkedList <T>{
         temp.next=null;
         temp=tail;
     }
+    public Node<T> searchElement(T search) {
+        Node<T> temp = head;
+        while (temp != null) {
+            if (temp.data.equals(search))
+                return temp;
+            temp=temp.next;
+        }
+        return null;
+    }
 }

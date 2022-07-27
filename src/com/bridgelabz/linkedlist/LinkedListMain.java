@@ -11,5 +11,11 @@ public class LinkedListMain {
            linkedList1.popLast();
            linkedList1.print();
 
+           if(linkedList1.searchElement(30)!=null){
+               System.out.println("Element Found Successfully!");
+           }else {
+               System.out.println("Element Not Found!");
+           }
+
     }
 }
