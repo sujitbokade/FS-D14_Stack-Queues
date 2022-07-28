@@ -1,4 +1,4 @@
-package com.bridgelabz.stack;
+package com.bridgelabz.stackandqueue;
 
 import com.bridgelabz.linkedlist.LinkedList;
 
