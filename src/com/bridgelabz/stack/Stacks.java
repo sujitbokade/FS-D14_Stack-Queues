@@ -19,6 +19,16 @@ public class Stacks <T>{
     void pop(){
         linkedList.pop();
     }
+    public T peak(){
+        return linkedList.peak();
+    }
+
+    public boolean isEmpty(){
+        if(linkedList.size() == 0)
+            return true;
+        else
+            return false;
+    }
 
     public static void main(String[] args) {
         Stacks<Integer> stack = new Stacks<>();
@@ -26,6 +36,13 @@ public class Stacks <T>{
         stack.push(30);
         stack.push(56);
         stack.display();
+
+        while(!stack.isEmpty()){
+            System.out.println(stack.peak());
+            stack.pop();
+            stack.display();
+            System.out.println();
+        }
     }
     }
 

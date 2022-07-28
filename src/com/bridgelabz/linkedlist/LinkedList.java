@@ -93,8 +93,12 @@ public class LinkedList <T>{
         return count;
     }
 
+    public  T peak(){
+        return head.data;
+    }
 
-             }
+
+}
 
 
 
