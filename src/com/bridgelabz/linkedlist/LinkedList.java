@@ -74,7 +74,7 @@ public class LinkedList <T>{
         }
         temp.next=searchNode.next;
     }
-    void print(){
+    public void print(){
         Node<T> temp=head;
         while(temp != null){
             System.out.print(temp.data+"->");
@@ -92,4 +92,9 @@ public class LinkedList <T>{
         }
         return count;
     }
-}
+
+
+             }
+
+
+
