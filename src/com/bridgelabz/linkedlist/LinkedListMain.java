@@ -26,6 +26,12 @@ public class LinkedListMain {
 
            System.out.println(linkedList2.insertAfter(30,40));
            linkedList2.print();
+           System.out.println();
+
+           linkedList2.deleteElement(40);
+           linkedList2.print();
+           System.out.println(linkedList2.size());
+
 
     }
 }

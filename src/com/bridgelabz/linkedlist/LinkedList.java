@@ -65,6 +65,15 @@ public class LinkedList <T>{
         }
         return false;
     }
+
+    public void deleteElement(T data){
+        Node<T> searchNode=searchElement(data);
+        Node<T> temp=head;
+        while(temp.next!=searchNode){
+            temp=temp.next;
+        }
+        temp.next=searchNode.next;
+    }
     void print(){
         Node<T> temp=head;
         while(temp != null){
@@ -72,5 +81,15 @@ public class LinkedList <T>{
             temp=temp.next;
         }
         System.out.println("Null");
+    }
+
+    public int size() {
+        int count=0;
+        Node<T>temp=head;
+        while (temp!=null){
+            temp=temp.next;
+            count++;
+        }
+        return count;
     }
 }
