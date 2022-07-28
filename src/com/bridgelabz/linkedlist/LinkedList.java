@@ -57,7 +57,7 @@ public class LinkedList <T>{
     }
     public boolean insertAfter(T searchData, T insertData){
         Node<T> newNode = new Node<>(insertData);
-        Node<T> searchNode = new Node<>(searchData);
+        Node<T> searchNode = searchElement(searchData);
         if(searchNode!=null){
             newNode.next=searchNode.next;
             searchNode.next=newNode;
