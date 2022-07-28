@@ -26,16 +26,6 @@ public class LinkedList <T>{
         }
 
     }
-
-    void print(){
-        Node<T> temp=head;
-        while(temp!=null){
-            System.out.print(temp.data+"->");
-            temp=temp.next;
-        }
-        System.out.println("Null");
-    }
-
     public void insert(T data) {
         Node<T> newNode=new Node<>(data);
         head.next=newNode;
@@ -56,13 +46,31 @@ public class LinkedList <T>{
         temp.next=null;
         temp=tail;
     }
-    public Node<T> searchElement(T search) {
+    public Node<T> searchElement(T searchData) {
         Node<T> temp = head;
         while (temp != null) {
-            if (temp.data.equals(search))
+            if (temp.data.equals(searchData))
                 return temp;
             temp=temp.next;
         }
         return null;
+    }
+    public boolean insertAfter(T searchData, T insertData){
+        Node<T> newNode = new Node<>(insertData);
+        Node<T> searchNode = new Node<>(searchData);
+        if(searchNode!=null){
+            newNode.next=searchNode.next;
+            searchNode.next=newNode;
+            return true;
+        }
+        return false;
+    }
+    void print(){
+        Node<T> temp=head;
+        while(temp != null){
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+        System.out.println("Null");
     }
 }
